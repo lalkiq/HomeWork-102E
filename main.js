@@ -43,7 +43,7 @@ const products = [
   
 
 
-console.log("Назви продуктів");
+console.log("Назви продуктів:");
 products.forEach(product => {
     console.log(product.name);
 });
