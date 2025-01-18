@@ -1,77 +1,61 @@
 const products = [
-    {
-      name: "Смартфон",
-      price: 25000,
-      stock: 10,
-      category: "Электроніка",
-      rating: 4.7,
-      isOnSale: false,
-    },
-    {
-      name: "Ноутбук",
-      price: 55000,
-      stock: 5,
-      category: "Электроніка",
-      rating: 4.5,
-      isOnSale: true,
-    },
-    {
-      name: "Навушники",
-      price: 3000,
-      stock: 25,
-      category: "Аксесуари",
-      rating: 4.2,
-      isOnSale: false,
-    },
-    {
-      name: "Клавіатура",
-      price: 1500,
-      stock: 15,
-      category: "Периферія",
-      rating: 3.9,
-      isOnSale: true,
-    },
-    {
-      name: "Монітор",
-      price: 12000,
-      stock: 8,
-      category: "Электроніка",
-      rating: 4.8,
-      isOnSale: false,
-    },
-  ];
-  
+  {
+    name: "Смартфон",
+    price: 25000,
+    stock: 10,
+    category: "Электроника",
+    rating: 4.7,
+    isOnSale: false,
+  },
+  {
+    name: "Ноутбук",
+    price: 55000,
+    stock: 5,
+    category: "Электроника",
+    rating: 4.5,
+    isOnSale: true,
+  },
+  {
+    name: "Наушники",
+    price: 3000,
+    stock: 25,
+    category: "Аксессуары",
+    rating: 4.2,
+    isOnSale: false,
+  },
+  {
+    name: "Клавиатура",
+    price: 1500,
+    stock: 15,
+    category: "Периферия",
+    rating: 3.9,
+    isOnSale: true,
+  },
+  {
+    name: "Монитор",
+    price: 12000,
+    stock: 8,
+    category: "Электроника",
+    rating: 4.8,
+    isOnSale: false,
+  },
+];
 
-
-console.log("Назви продуктів:");
-products.forEach(product => {
-    console.log(product.name);
+console.log("Названия товаров:");
+products.forEach((product) => {
+  console.log(product.name);
 });
 
-
-console.log("\nЦіни продуктів:");
-products.forEach(product => {
-    console.log(product.price);
+console.log("\nТовары на скидке:");
+products.forEach((product) => {
+  if (product.isOnSale) {
+    console.log(`${product.name} - ${product.price} грн`);
+  }
 });
 
-console.log("Кількість товару в наявності:");
-products.forEach(product => {
-    console.log(product.stock);
-});
-
-
-console.log("\nКатегорії продуктів:");
-products.forEach(product => {
-    console.log(product.category);
-});
-
-console.log("\nРейтинг продуктів:");
-products.forEach(product => {
-    console.log(product.rating);
-});
-
-
-console.log("\nПродукт в продажі?");
-products.forEach(product => {
-    console.log(product.isOnSale);
+console.log("\nТовары с высоким рейтингом (больше 4.5):");
+products.forEach((product) => {
+  if (product.rating > 4.5) {
+    console.log(`${product.name} - Рейтинг: ${product.rating}`);
+  }
 });
